@@ -25,7 +25,7 @@ GadgetRouter.get('/', authMiddleware, async (req, res): Promise<any> => {
         const data = result.map((item) => {
             return `${item.name} - ${Generate()}% success probability`
         })
-        return res.json(data)
+        return res.json({data})
 
     }catch(err){
         return res.status(500).json({
@@ -43,7 +43,7 @@ GadgetRouter.post('/', authMiddleware, async (req, res) => {
             name
         }
     })
-    res.json(result)
+    res.json({result})
 })
 
 // Update Gadget name or status
@@ -69,10 +69,10 @@ GadgetRouter.put('/:id', authMiddleware, async (req, res): Promise<any> => {
                 status
             }
         })
-        return res.json(result)
+        return res.json({message:"Status updated",status:status})
     }catch(err){
         return res.json({
-            error:"Failed"
+            error:"Inputs are not valid"
         })
     }
 })
@@ -131,7 +131,7 @@ GadgetRouter.get('/:id/self-destruct',authMiddleware, async (req, res) : Promise
     })
 
     return res.json({
-        SelfDestructCode: Code
+        selfDestructCode: Code
     })
 })
 GadgetRouter.post('/:id/self-destruct',authMiddleware, async (req, res) : Promise<any> =>{
