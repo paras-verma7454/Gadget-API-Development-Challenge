@@ -1,5 +1,6 @@
 # Gadget API Development Challenge
 
+- The Backend is deployed on Render and here's the [URL](https://gadget-api-development-challenge-sbe5.onrender.com)
 - Tech Stack used :
     - TypeScript
     - Prisma ORM
