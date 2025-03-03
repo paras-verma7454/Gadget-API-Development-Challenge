@@ -153,7 +153,7 @@ GadgetRouter.post('/:id/self-destruct',authMiddleware, async (req, res) : Promis
     })
 
     return res.json({
-        message:"Gadget will be deleted in 3 seconds"
+        message:"Gadget will be deleted in 5 seconds..."
     })
 })
 
