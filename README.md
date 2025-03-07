@@ -10,6 +10,7 @@
 - Endpoints are divided into 2 :
     - User:
         - ```/auth/signup``` : Method ```POST```
+        - use JWT with Bearer 
 
       ![image](https://github.com/user-attachments/assets/067e0a82-fae9-422d-bbbc-068a62b69612)
 
